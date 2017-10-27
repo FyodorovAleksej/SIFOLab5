@@ -1,0 +1,1123 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+
+/*
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+
+HEADER
+{
+	VERSION = 1;
+	TIME_UNIT = ns;
+	PRINT_OPTIONS = "Print_options_version 6\
+range_start 0ps\
+range_end 1.0s\
+width 1\
+names_percentage 25\
+comments 1\
+grid_lines 1\
+time_bars 1\
+name_every_page 0\
+expand_groups 0\
+print_all 1\
+print_row_height 100";
+	DATA_OFFSET = 0.0;
+	DATA_DURATION = 1000.0;
+	SIMULATION_TIME = 1000.0;
+	GRID_PHASE = 0.0;
+	GRID_PERIOD = 10.0;
+	GRID_DUTY_CYCLE = 50;
+}
+
+SIGNAL("bus")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 4;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("bus[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "bus";
+}
+
+SIGNAL("bus[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "bus";
+}
+
+SIGNAL("bus[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "bus";
+}
+
+SIGNAL("bus[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "bus";
+}
+
+SIGNAL("CLK")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Const")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 4;
+	LSB_INDEX = 0;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Const[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Const";
+}
+
+SIGNAL("Const[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Const";
+}
+
+SIGNAL("Const[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Const";
+}
+
+SIGNAL("Const[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Const";
+}
+
+SIGNAL("Count")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 4;
+	LSB_INDEX = 0;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Count[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Count";
+}
+
+SIGNAL("Count[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Count";
+}
+
+SIGNAL("Count[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Count";
+}
+
+SIGNAL("Count[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "Count";
+}
+
+SIGNAL("Grant")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Request")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+TRANSITION_LIST("bus[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("bus[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("bus[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("bus[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 180.0;
+		LEVEL 0 FOR 740.0;
+	}
+}
+
+TRANSITION_LIST("CLK")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 100;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+		}
+	}
+}
+
+TRANSITION_LIST("Const[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Const[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Const[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Const[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Count[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Count[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Count[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Count[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Grant")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 180.0;
+		LEVEL 0 FOR 740.0;
+	}
+}
+
+TRANSITION_LIST("Request")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 25.0;
+		NODE
+		{
+			REPEAT = 6;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 5.0;
+	}
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "bus";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 0;
+	TREE_LEVEL = 0;
+	CHILDREN = 1, 2, 3, 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "bus[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 1;
+	TREE_LEVEL = 1;
+	PARENT = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "bus[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 1;
+	PARENT = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "bus[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 1;
+	PARENT = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "bus[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 1;
+	PARENT = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "CLK";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Const";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 6;
+	TREE_LEVEL = 0;
+	CHILDREN = 7, 8, 9, 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Const[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 7;
+	TREE_LEVEL = 1;
+	PARENT = 6;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Const[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 8;
+	TREE_LEVEL = 1;
+	PARENT = 6;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Const[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 9;
+	TREE_LEVEL = 1;
+	PARENT = 6;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Const[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 10;
+	TREE_LEVEL = 1;
+	PARENT = 6;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Count";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 11;
+	TREE_LEVEL = 0;
+	CHILDREN = 12, 13, 14, 15;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Count[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 12;
+	TREE_LEVEL = 1;
+	PARENT = 11;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Count[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 13;
+	TREE_LEVEL = 1;
+	PARENT = 11;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Count[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 14;
+	TREE_LEVEL = 1;
+	PARENT = 11;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Count[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 15;
+	TREE_LEVEL = 1;
+	PARENT = 11;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Grant";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 16;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Request";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 17;
+	TREE_LEVEL = 0;
+}
+
+TIME_BAR
+{
+	TIME = 55000;
+	MASTER = TRUE;
+}
+;
+
+/*transitions from sub-simulation number 6*/
+
+TRANSITION_LIST("bus[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68279000.0;
+	}
+}
+
+TRANSITION_LIST("bus[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68279000.0;
+	}
+}
+
+TRANSITION_LIST("bus[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68279000.0;
+	}
+}
+
+TRANSITION_LIST("bus[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68279000.0;
+	}
+}
+
+TRANSITION_LIST("Request")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 20.0;
+		NODE
+		{
+			REPEAT = 426743;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 90.0;
+	}
+}
+;
+
+/*transitions from sub-simulation number 7*/
+
+TRANSITION_LIST("bus[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278330.0;
+	}
+}
+
+TRANSITION_LIST("bus[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278330.0;
+	}
+}
+
+TRANSITION_LIST("bus[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278330.0;
+	}
+}
+
+TRANSITION_LIST("bus[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278330.0;
+	}
+}
+
+TRANSITION_LIST("Request")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 60.0;
+		NODE
+		{
+			REPEAT = 426739;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 20.0;
+	}
+}
+;
+
+/*transitions from sub-simulation number 8*/
+
+TRANSITION_LIST("bus[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68279000.0;
+	}
+}
+
+TRANSITION_LIST("bus[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68279000.0;
+	}
+}
+
+TRANSITION_LIST("bus[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68279000.0;
+	}
+}
+
+TRANSITION_LIST("bus[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68279000.0;
+	}
+}
+
+TRANSITION_LIST("Request")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 130.0;
+		NODE
+		{
+			REPEAT = 426742;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 140.0;
+	}
+}
+;
+
+/*transitions from sub-simulation number 9*/
+
+TRANSITION_LIST("bus[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278320.0;
+	}
+}
+
+TRANSITION_LIST("bus[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278320.0;
+	}
+}
+
+TRANSITION_LIST("bus[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278320.0;
+	}
+}
+
+TRANSITION_LIST("bus[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278320.0;
+	}
+}
+
+TRANSITION_LIST("Request")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 10.0;
+		NODE
+		{
+			REPEAT = 426739;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 60.0;
+	}
+}
+;
+
+/*transitions from sub-simulation number 10*/
+
+TRANSITION_LIST("bus[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68279000.0;
+	}
+}
+
+TRANSITION_LIST("bus[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68279000.0;
+	}
+}
+
+TRANSITION_LIST("bus[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68279000.0;
+	}
+}
+
+TRANSITION_LIST("bus[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68279000.0;
+	}
+}
+
+TRANSITION_LIST("Request")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 90.0;
+		NODE
+		{
+			REPEAT = 426743;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 20.0;
+	}
+}
+;
+
+/*transitions from sub-simulation number 11*/
+
+TRANSITION_LIST("bus[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278375.0;
+	}
+}
+
+TRANSITION_LIST("bus[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278375.0;
+	}
+}
+
+TRANSITION_LIST("bus[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278375.0;
+	}
+}
+
+TRANSITION_LIST("bus[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278375.0;
+	}
+}
+
+TRANSITION_LIST("Request")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 130.0;
+		NODE
+		{
+			REPEAT = 426739;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 5.0;
+	}
+}
+;
+
+/*transitions from sub-simulation number 12*/
+
+TRANSITION_LIST("bus[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278945.0;
+	}
+}
+
+TRANSITION_LIST("bus[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278945.0;
+	}
+}
+
+TRANSITION_LIST("bus[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278945.0;
+	}
+}
+
+TRANSITION_LIST("bus[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278945.0;
+	}
+}
+
+TRANSITION_LIST("Request")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 5.0;
+		NODE
+		{
+			REPEAT = 426743;
+			LEVEL 0 FOR 150.0;
+			LEVEL 1 FOR 10.0;
+		}
+		LEVEL 0 FOR 60.0;
+	}
+}
+;
+
+/*transitions from sub-simulation number 13*/
+
+TRANSITION_LIST("bus[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278555.0;
+	}
+}
+
+TRANSITION_LIST("bus[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278555.0;
+	}
+}
+
+TRANSITION_LIST("bus[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278555.0;
+	}
+}
+
+TRANSITION_LIST("bus[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278555.0;
+	}
+}
+
+TRANSITION_LIST("Request")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 90.0;
+		NODE
+		{
+			REPEAT = 426740;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 55.0;
+	}
+}
+;
+
+/*transitions from sub-simulation number 14*/
+
+TRANSITION_LIST("bus[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278775.0;
+	}
+}
+
+TRANSITION_LIST("bus[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278775.0;
+	}
+}
+
+TRANSITION_LIST("bus[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278775.0;
+	}
+}
+
+TRANSITION_LIST("bus[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 68278775.0;
+	}
+}
+
+TRANSITION_LIST("Request")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 95.0;
+		NODE
+		{
+			REPEAT = 426741;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 110.0;
+	}
+}
+;
+
+/*transitions from sub-simulation number 15*/
+
+TRANSITION_LIST("bus[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 44098735.0;
+	}
+}
+
+TRANSITION_LIST("bus[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 44098735.0;
+	}
+}
+
+TRANSITION_LIST("bus[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 44098735.0;
+	}
+}
+
+TRANSITION_LIST("bus[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 44098735.0;
+	}
+}
+
+TRANSITION_LIST("Request")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 40.0;
+		NODE
+		{
+			REPEAT = 275616;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 125.0;
+	}
+}
+;
